@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(35, 35, 35);
+}
+
+.container {
+  padding: 10rem 0;
+}
+
+.title {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.todo-input {
+  width: 400px;
+  font-size: 2.4rem;
+  padding: 1rem 2rem;
+  border: none;
+  margin-bottom: 1rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.todo-input:focus {
+  outline: none;
+}
+
+.remove-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-button svg {
+  width: 15px;
+  height: 15px;
+  fill: rgb(190, 190, 190);
+  opacity: 0.3;
+}
+
+.remove-button:hover svg {
+  fill: rgb(56, 56, 56);
+}
+
+.todo-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: white;
+  padding: 2rem;
+
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  min-height: 300px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-item:hover .remove-button svg {
+  opacity: 1;
+}
+
+.todo-item--completed {
+  color: rgb(203, 203, 203);
+  text-decoration: line-through;
+}
+
+.todo-name {
+  flex-grow: 1;
+  padding: 1rem 0;
+}
+
+.todo-name:hover {
+  color: grey;
+  text-decoration: line-through;
+  cursor: pointer;
+}
+
+.todo-item--completed .todo-name:hover {
+  color: rgb(192, 192, 192);
+}
